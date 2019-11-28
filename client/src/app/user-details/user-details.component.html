@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Id</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="users != null && users.length > 0">
+            <tr *ngFor="let user of users; let i=index; trackBy: trackById">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.emailId }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
