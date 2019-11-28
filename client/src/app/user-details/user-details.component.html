@@ -3,17 +3,22 @@
         <thead>
             <tr>
             <th scope="col">#</th>
-            <th scope="col">First Name</th>
+            <th scope="col">First Name<span (click)="reverseSort()" class="pull-right">
+                <i [ngClass]="sortIconClass"></i></span></th>
             <th scope="col">Last Name</th>
-            <th scope="col">Email Id</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Department</th>
             </tr>
         </thead>
         <tbody *ngIf="users != null && users.length > 0">
-            <tr *ngFor="let user of users; let i=index; trackBy: trackById">
+            <tr *ngFor="let user of users | sortUser : asc; let i=index; trackBy: trackById">
                 <th scope="row">{{ i + 1 }}</th>
                 <td>{{ user.firstName }}</td>
                 <td>{{ user.lastName }}</td>
-                <td>{{ user.emailId }}</td>
+                <td>{{ user.gender | gender }}</td>
+                <td>{{ user.dateOfBirth | date }}</td>
+                <td>{{ user.department | department }}</td>
             </tr>
         </tbody>
     </table>

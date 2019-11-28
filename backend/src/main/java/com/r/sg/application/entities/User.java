@@ -14,9 +14,9 @@ import com.r.sg.application.models.UserVO;
 public class User extends AbstractPersistable<Long> {
 	private String firstName;
 	private String lastName;
-	private String emailId;
-	private Calendar joiningDate;
-	private Integer ctc;
+	private String gender;
+	private Calendar dateOfBirth;
+	private String department;
 
 	public String getFirstName() {
 		return firstName;
@@ -34,35 +34,43 @@ public class User extends AbstractPersistable<Long> {
 		this.lastName = lastName;
 	}
 
-	public Calendar getJoiningDate() {
-		return joiningDate;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setJoiningDate(Calendar joiningDate) {
-		this.joiningDate = joiningDate;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
-	public Integer getCtc() {
-		return ctc;
+	public Calendar getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public void setCtc(Integer ctc) {
-		this.ctc = ctc;
+	public void setDateOfBirth(Calendar dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 
 	public String getEmailId() {
-		return emailId;
+		return gender;
 	}
 
 	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+		this.gender = emailId;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + ((emailId == null) ? 0 : emailId.hashCode());
+		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
 		return result;
 	}
 
@@ -75,10 +83,10 @@ public class User extends AbstractPersistable<Long> {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (emailId == null) {
-			if (other.emailId != null)
+		if (gender == null) {
+			if (other.gender != null)
 				return false;
-		} else if (!emailId.equals(other.emailId))
+		} else if (!gender.equals(other.gender))
 			return false;
 		return true;
 	}
@@ -90,9 +98,9 @@ public class User extends AbstractPersistable<Long> {
 		userVO.setId(getId());
 		userVO.setFirstName(firstName);
 		userVO.setLastName(lastName);
-		userVO.setEmailId((emailId));
-		userVO.setCtc(ctc);
-		userVO.setJoiningDate(joiningDate);
+		userVO.setGender((gender));
+		userVO.setDepartment(department);
+		userVO.setDateOfBirth(dateOfBirth);
 		
 		return userVO;
 	}

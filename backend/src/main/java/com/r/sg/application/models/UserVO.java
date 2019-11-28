@@ -15,9 +15,9 @@ public class UserVO {
 	
 	private String firstName;
 	private String lastName;
-	private String emailId;
-	private Calendar joiningDate;
-	private Integer ctc;
+	private String gender;
+	private Calendar dateOfBirth;
+	private String department;
 	
 	
 	public Long getId() {
@@ -38,56 +38,32 @@ public class UserVO {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Calendar getJoiningDate() {
-		return joiningDate;
+	public String getGender() {
+		return gender;
 	}
-	public void setJoiningDate(Calendar joiningDate) {
-		this.joiningDate = joiningDate;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public Integer getCtc() {
-		return ctc;
+	public Calendar getDateOfBirth() {
+		return dateOfBirth;
 	}
-	public void setCtc(Integer ctc) {
-		this.ctc = ctc;
+	public void setDateOfBirth(Calendar dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
-	public String getEmailId() {
-		return emailId;
+	public String getDepartment() {
+		return department;
 	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setDepartment(String department) {
+		this.department = department;
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + ((emailId == null) ? 0 : emailId.hashCode());
-		return result;
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserVO other = (UserVO) obj;
-		if (emailId == null) {
-			if (other.emailId != null)
-				return false;
-		} else if (!emailId.equals(other.emailId))
-			return false;
-		return true;
-	}
-	
 	public User toEntity() {
 		User user = new User();
 		
 		user.setFirstName(firstName);
 		user.setLastName(lastName);
-		user.setEmailId((emailId));
-		user.setCtc(ctc);
-		user.setJoiningDate(joiningDate);
+		user.setGender((gender));
+		user.setDateOfBirth(dateOfBirth);
+		user.setDepartment(department);
 		
 		return user;
 	}

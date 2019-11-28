@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n  <a class=\"navbar-brand\" href=\"#\">Employee Portal</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"/createUser\">Create User <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"/viewUsers\">View User</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n  <a class=\"navbar-brand\" href=\"#\">Employee Portal</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"/createUser\">Create User <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\" routerLinkActive=\"active\">\n        <a class=\"nav-link\" routerLink=\"/viewUsers\">View User</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <table class=\"table\">\n        <thead>\n            <tr>\n            <th scope=\"col\">#</th>\n            <th scope=\"col\">First Name</th>\n            <th scope=\"col\">Last Name</th>\n            <th scope=\"col\">Email Id</th>\n            </tr>\n        </thead>\n        <tbody *ngIf=\"users != null && users.length > 0\">\n            <tr *ngFor=\"let user of users; let i=index; trackBy: trackById\">\n                <th scope=\"row\">{{ i + 1 }}</th>\n                <td>{{ user.firstName }}</td>\n                <td>{{ user.lastName }}</td>\n                <td>{{ user.emailId }}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"container\">\n    <table class=\"table\">\n        <thead>\n            <tr>\n            <th scope=\"col\">#</th>\n            <th scope=\"col\">First Name<span (click)=\"reverseSort()\" class=\"pull-right\">\n                <i [ngClass]=\"sortIconClass\"></i></span></th>\n            <th scope=\"col\">Last Name</th>\n            <th scope=\"col\">Gender</th>\n            <th scope=\"col\">Date Of Birth</th>\n            <th scope=\"col\">Department</th>\n            </tr>\n        </thead>\n        <tbody *ngIf=\"users != null && users.length > 0\">\n            <tr *ngFor=\"let user of users | sortUser : asc; let i=index; trackBy: trackById\">\n                <th scope=\"row\">{{ i + 1 }}</th>\n                <td>{{ user.firstName }}</td>\n                <td>{{ user.lastName }}</td>\n                <td>{{ user.gender | gender }}</td>\n                <td>{{ user.dateOfBirth | date }}</td>\n                <td>{{ user.department | department }}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div class=\"container\">\n    <table class=\"table\">\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n\n    <form [formGroup]=\"userForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-group\">\n            <label for=\"firstName\">First Name</label>\n                <input type=\"text\" class=\"form-control\" id=\"firstName\" placeholder=\"First Name\" formControlName=\"firstName\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"lastName\">Last Name</label>\n                <input type=\"text\" class=\"form-control\" id=\"lastName\" placeholder=\"Last Name\" formControlName=\"lastName\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"emailId\">Email ID</label>\n                <input type=\"text\" class=\"form-control\" id=\"emailId\" placeholder=\"Email ID\" formControlName=\"emailId\">\n                \n            </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n    </form>\n\n</div>\n"
+module.exports = "\n<div class=\"container\">\n\n    <form [formGroup]=\"userForm\" (ngSubmit)=\"onSubmit()\">\n        <div class=\"form-group col-sm-12\">\n                <mat-form-field class=\"w-100\">\n                <input matInput type=\"text\" class=\"form-control\" id=\"firstName\" placeholder=\"First Name\" formControlName=\"firstName\">\n                <mat-error *ngIf=\"firstName.invalid && firstName.touched\">\n                    Please provide the first name.\n                </mat-error>\n            </mat-form-field>\n        </div>\n        <div class=\"form-group col-sm-12\">\n            <mat-form-field class=\"w-100\">\n                <input matInput type=\"text\" class=\"form-control\" id=\"lastName\" placeholder=\"Last Name\" formControlName=\"lastName\">\n                <mat-error *ngIf=\"lastName.invalid\">\n                    Please provide the last name.\n                </mat-error>\n            </mat-form-field>\n        </div>\n        <div class=\"form-group col-sm-12\">\n            <mat-radio-group class=\"w-100\" placeholder=\"gender\" aria-label=\"Gender\" formControlName=\"gender\">\n                <mat-radio-button value=\"M\">Male</mat-radio-button>\n                <mat-radio-button value=\"F\">Female</mat-radio-button>\n            </mat-radio-group>\n            <mat-error *ngIf=\"gender.invalid && gender.touched\">\n                Please select a gender.\n            </mat-error>\n        </div>\n        <div class=\"form-group col-sm-12\">\n            <mat-form-field>\n                <input matInput formControlName=\"dateOfBirth\" [matDatepicker]=\"picker\" placeholder=\"Date Of Birth\">\n                <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                <mat-datepicker #picker></mat-datepicker>\n            </mat-form-field>\n            <mat-error *ngIf=\"dateOfBirth.invalid && dateOfBirth.touched\">\n                Please provide the date of birth.\n            </mat-error>\n        </div>\n        <div class=\"form-group col-sm-12\">\n            <mat-form-field>\n                <mat-label>Department</mat-label>\n                <mat-select formControlName=\"department\">\n                    <mat-option *ngFor=\"let department of departments\" [value]=\"department.value\">\n                    {{department.viewValue}}\n                    </mat-option>\n                </mat-select>\n            </mat-form-field>\n            <mat-error *ngIf=\"department.invalid && department.touched\">\n                Please provide a department.\n            </mat-error>\n        </div>\n        <div class=\"form-group col-sm-12\">\n            <button mat-raised-button class=\"btn btn-lg\" type=\"submit\" >Submit</button>\n        </div>\n    </form>\n\n</div>\n"
 
 /***/ }),
 
@@ -79,16 +79,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _message_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./message.service */ "./src/app/message.service.ts");
+
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(messageService) {
+        this.messageService = messageService;
         this.title = 'client';
+        this.showSuccess = true;
     }
+    AppComponent.ctorParameters = function () { return [
+        { type: _message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"] }
+    ]; };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
+            providers: [_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"]],
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         })
     ], AppComponent);
@@ -114,10 +122,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _user_user_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user/user.component */ "./src/app/user/user.component.ts");
-/* harmony import */ var _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-details/user-details.component */ "./src/app/user-details/user-details.component.ts");
+/* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _user_user_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user/user.component */ "./src/app/user/user.component.ts");
+/* harmony import */ var _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-details/user-details.component */ "./src/app/user-details/user-details.component.ts");
+/* harmony import */ var _sort_user_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sort-user.pipe */ "./src/app/sort-user.pipe.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _gender_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./gender.pipe */ "./src/app/gender.pipe.ts");
+/* harmony import */ var _department_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./department.pipe */ "./src/app/department.pipe.ts");
+
+
+
+
+
+
 
 
 
@@ -128,8 +148,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: 'createUser', component: _user_user_component__WEBPACK_IMPORTED_MODULE_7__["UserComponent"] },
-    { path: 'viewUsers', component: _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailsComponent"] }
+    { path: 'createUser', component: _user_user_component__WEBPACK_IMPORTED_MODULE_8__["UserComponent"] },
+    { path: 'viewUsers', component: _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_9__["UserDetailsComponent"] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -137,18 +157,31 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _user_user_component__WEBPACK_IMPORTED_MODULE_7__["UserComponent"],
-                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_8__["UserDetailsComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _user_user_component__WEBPACK_IMPORTED_MODULE_8__["UserComponent"],
+                _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_9__["UserDetailsComponent"],
+                _sort_user_pipe__WEBPACK_IMPORTED_MODULE_10__["SortUserPipe"],
+                _gender_pipe__WEBPACK_IMPORTED_MODULE_13__["GenderPipe"],
+                _department_pipe__WEBPACK_IMPORTED_MODULE_14__["DepartmentPipe"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(routes),
+                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forRoot(routes),
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
+                angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__["AngularFontAwesomeModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatRadioModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatDatepickerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatNativeDateModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatSelectModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_12__["MatOptionModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -173,6 +206,170 @@ var UrlConstants = /** @class */ (function () {
     }
     UrlConstants.USERS_URL = "http://localhost:8080/employeePortalApi/api/users";
     return UrlConstants;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/department.pipe.ts":
+/*!************************************!*\
+  !*** ./src/app/department.pipe.ts ***!
+  \************************************/
+/*! exports provided: DepartmentPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DepartmentPipe", function() { return DepartmentPipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var DepartmentPipe = /** @class */ (function () {
+    function DepartmentPipe() {
+    }
+    DepartmentPipe.prototype.transform = function (department) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        switch (department) {
+            case 'Dev':
+                return 'Developer';
+            case 'Test':
+                return 'Tester';
+            case 'IT':
+                return 'IT';
+            default:
+                return 'Not Specified';
+        }
+    };
+    DepartmentPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+            name: 'department'
+        })
+    ], DepartmentPipe);
+    return DepartmentPipe;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/gender.pipe.ts":
+/*!********************************!*\
+  !*** ./src/app/gender.pipe.ts ***!
+  \********************************/
+/*! exports provided: GenderPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GenderPipe", function() { return GenderPipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var GenderPipe = /** @class */ (function () {
+    function GenderPipe() {
+    }
+    GenderPipe.prototype.transform = function (gender) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        switch (gender) {
+            case 'M':
+                return 'Male';
+            case 'F':
+                return 'Female';
+            default:
+                return 'Not Specified';
+        }
+    };
+    GenderPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+            name: 'gender'
+        })
+    ], GenderPipe);
+    return GenderPipe;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/message.service.ts":
+/*!************************************!*\
+  !*** ./src/app/message.service.ts ***!
+  \************************************/
+/*! exports provided: MessageService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageService", function() { return MessageService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MessageService = /** @class */ (function () {
+    function MessageService() {
+    }
+    MessageService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], MessageService);
+    return MessageService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/sort-user.pipe.ts":
+/*!***********************************!*\
+  !*** ./src/app/sort-user.pipe.ts ***!
+  \***********************************/
+/*! exports provided: SortUserPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SortUserPipe", function() { return SortUserPipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SortUserPipe = /** @class */ (function () {
+    function SortUserPipe() {
+    }
+    SortUserPipe.prototype.transform = function (users, asc) {
+        var args = [];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            args[_i - 2] = arguments[_i];
+        }
+        var reverse = asc === true ? 1 : -1;
+        return users.sort(function (userA, userB) {
+            var nameA = userA.firstName.toUpperCase();
+            var nameB = userB.firstName.toUpperCase();
+            if (nameA < nameB) {
+                return -1 * reverse;
+            }
+            if (nameA > nameB) {
+                return 1 * reverse;
+            }
+            return 0 * reverse;
+        });
+    };
+    SortUserPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+            name: 'sortUser'
+        })
+    ], SortUserPipe);
+    return SortUserPipe;
 }());
 
 
@@ -210,6 +407,8 @@ var UserDetailsComponent = /** @class */ (function () {
     function UserDetailsComponent(userService) {
         this.userService = userService;
         this.users = [];
+        this.asc = true;
+        this.sortIconClass = 'fas fa-sort-alpha-down';
     }
     UserDetailsComponent.prototype.ngOnInit = function () {
         this.loadUsers();
@@ -225,6 +424,10 @@ var UserDetailsComponent = /** @class */ (function () {
     UserDetailsComponent.prototype.trackById = function (index, user) {
         console.log(user);
         return user.id;
+    };
+    UserDetailsComponent.prototype.reverseSort = function () {
+        this.asc = !this.asc;
+        this.sortIconClass = this.asc == true ? 'fas fa-sort-alpha-down' : 'fas fa-sort-alpha-up';
     };
     UserDetailsComponent.ctorParameters = function () { return [
         { type: _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
@@ -320,31 +523,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
 
 var UserComponent = /** @class */ (function () {
-    function UserComponent(fb, userService) {
+    function UserComponent(fb, userService, route, router) {
         this.fb = fb;
         this.userService = userService;
+        this.route = route;
+        this.router = router;
         this.userForm = this.fb.group({
-            firstName: 'Apurva',
-            lastName: 'Das',
-            emailId: 'apurvadas95@gmail.com'
+            firstName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            lastName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            gender: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            dateOfBirth: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            department: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
         });
+        this.departments = [
+            { value: 'Dev', viewValue: 'Developer' },
+            { value: 'Test', viewValue: 'Tester' },
+            { value: 'IT', viewValue: 'IT' }
+        ];
     }
     UserComponent.prototype.ngOnInit = function () {
     };
     UserComponent.prototype.onSubmit = function () {
+        var _this = this;
+        console.log(this.userForm.value);
+        debugger;
+        if (this.userForm.invalid) {
+            return;
+        }
         this.userService.createUser(this.userForm.value)
             .subscribe(function (data) {
             console.log(data);
+            _this.router.navigate(['/viewUsers']);
         });
     };
+    Object.defineProperty(UserComponent.prototype, "firstName", {
+        get: function () {
+            return this.userForm.get('firstName');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserComponent.prototype, "lastName", {
+        get: function () {
+            return this.userForm.get('lastName');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserComponent.prototype, "gender", {
+        get: function () {
+            return this.userForm.get('gender');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserComponent.prototype, "dateOfBirth", {
+        get: function () {
+            return this.userForm.get('dateOfBirth');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserComponent.prototype, "department", {
+        get: function () {
+            return this.userForm.get('department');
+        },
+        enumerable: true,
+        configurable: true
+    });
     UserComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
-        { type: _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
+        { type: _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
     ]; };
     UserComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

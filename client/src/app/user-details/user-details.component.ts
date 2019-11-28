@@ -11,6 +11,8 @@ import { UserService } from '../user.service';
 export class UserDetailsComponent implements OnInit {
 
   users: User[] = [];
+  asc = true;
+  sortIconClass = 'fas fa-sort-alpha-down';
 
   constructor( private userService: UserService ) { }
 
@@ -29,6 +31,12 @@ export class UserDetailsComponent implements OnInit {
   trackById(index, user) {
     console.log(user);
     return user.id;
+  }
+
+  reverseSort() {
+    this.asc = !this.asc;
+    this.sortIconClass = this.asc == true ? 'fas fa-sort-alpha-down' : 'fas fa-sort-alpha-up';
+    
   }
 
 }
