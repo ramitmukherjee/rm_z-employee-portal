@@ -146,3 +146,11 @@
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:14:51:30 +0530] "GET /api/users HTTP/1.1" 404 1087
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:14:51:33 +0530] "GET /api/users HTTP/1.1" 404 1087
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:14:51:42 +0530] "POST /api/users HTTP/1.1" 404 1087
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal/ HTTP/1.1" 200 1359
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal/polyfills-es2015.js HTTP/1.1" 200 257309
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal/styles-es2015.js HTTP/1.1" 200 1173244
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal/vendor-es2015.js HTTP/1.1" 200 7114218
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal/runtime-es2015.js HTTP/1.1" 200 6240
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:18 +0530] "GET /employeePortal/main-es2015.js HTTP/1.1" 200 32260
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:19:29:23 +0530] "GET /employeePortalApi/api/users HTTP/1.1" 200 12

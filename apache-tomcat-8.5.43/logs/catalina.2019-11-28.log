@@ -820,3 +820,61 @@
 28-Nov-2019 19:19:14.233 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
 28-Nov-2019 19:19:14.234 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.43
 28-Nov-2019 19:19:14.257 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\employeePortalApi.war]
+28-Nov-2019 19:26:27.971 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.43
+28-Nov-2019 19:26:28.765 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 4 2019 20:53:15 UTC
+28-Nov-2019 19:26:28.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.43.0
+28-Nov-2019 19:26:28.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Nov-2019 19:26:28.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Nov-2019 19:26:28.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Nov-2019 19:26:28.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_191\jre
+28-Nov-2019 19:26:28.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_191-b12
+28-Nov-2019 19:26:28.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Nov-2019 19:26:28.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43
+28-Nov-2019 19:26:28.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43
+28-Nov-2019 19:26:28.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\conf\logging.properties
+28-Nov-2019 19:26:28.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Nov-2019 19:26:28.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Nov-2019 19:26:28.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Nov-2019 19:26:28.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Nov-2019 19:26:28.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43
+28-Nov-2019 19:26:28.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43
+28-Nov-2019 19:26:28.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\temp
+28-Nov-2019 19:26:28.772 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+28-Nov-2019 19:26:28.772 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+28-Nov-2019 19:26:28.772 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+28-Nov-2019 19:26:28.782 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+28-Nov-2019 19:26:30.289 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 19:26:31.142 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 19:26:31.178 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 19:26:31.185 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 19:26:31.187 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 3718 ms
+28-Nov-2019 19:26:31.300 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Nov-2019 19:26:31.301 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.43
+28-Nov-2019 19:26:31.349 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\employeePortalApi.war]
+28-Nov-2019 19:26:56.118 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Nov-2019 19:26:56.171 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\employeePortalApi.war] has finished in [24,822] ms
+28-Nov-2019 19:26:56.172 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\docs]
+28-Nov-2019 19:26:56.208 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\docs] has finished in [36] ms
+28-Nov-2019 19:26:56.208 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\employeePortal]
+28-Nov-2019 19:26:56.236 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\employeePortal] has finished in [28] ms
+28-Nov-2019 19:26:56.237 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\examples]
+28-Nov-2019 19:26:59.628 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\examples] has finished in [3,391] ms
+28-Nov-2019 19:26:59.628 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\host-manager]
+28-Nov-2019 19:26:59.669 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\host-manager] has finished in [41] ms
+28-Nov-2019 19:26:59.669 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\manager]
+28-Nov-2019 19:26:59.710 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\manager] has finished in [41] ms
+28-Nov-2019 19:26:59.710 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\org]
+28-Nov-2019 19:26:59.731 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\org] has finished in [21] ms
+28-Nov-2019 19:26:59.732 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\ROOT]
+28-Nov-2019 19:26:59.761 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\workspace\ramit\EmployeePortal\apache-tomcat-8.5.43\webapps\ROOT] has finished in [29] ms
+28-Nov-2019 19:26:59.766 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 19:26:59.773 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 19:26:59.775 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 28587 ms
+28-Nov-2019 19:40:02.339 INFO [Thread-7] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 19:40:02.584 INFO [Thread-7] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 19:40:02.808 INFO [Thread-7] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Nov-2019 19:40:02.869 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [employeePortalApi] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+28-Nov-2019 19:40:02.886 INFO [Thread-7] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 19:40:02.889 INFO [Thread-7] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 19:40:02.891 INFO [Thread-7] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 19:40:02.892 INFO [Thread-7] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

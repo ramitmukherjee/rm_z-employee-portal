@@ -148,7 +148,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'createUser', component: _user_user_component__WEBPACK_IMPORTED_MODULE_8__["UserComponent"] },
-    { path: 'viewUsers', component: _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_9__["UserDetailsComponent"] }
+    { path: 'viewUsers', component: _user_details_user_details_component__WEBPACK_IMPORTED_MODULE_9__["UserDetailsComponent"] },
+    { path: '', component: _user_user_component__WEBPACK_IMPORTED_MODULE_8__["UserComponent"] }
 ];
 let AppModule = class AppModule {
 };
