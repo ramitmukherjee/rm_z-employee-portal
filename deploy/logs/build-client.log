@@ -1,0 +1,54 @@
+
+> client@0.0.0 build C:\workspace\ramit\EmployeePortal\client
+> ng build --base-href /employeePortal/
+
+
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain-es2015.js, main-es2015.js.map[39m[22m (main) 20.4 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills-es2015.js, polyfills-es2015.js.map[39m[22m (polyfills) 251 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mruntime[39m[22m} [1m[32mruntime-es2015.js, runtime-es2015.js.map[39m[22m (runtime) 6.09 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mstyles[39m[22m} [1m[32mstyles-es2015.js, styles-es2015.js.map[39m[22m (styles) 973 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mvendor[39m[22m} [1m[32mvendor-es2015.js, vendor-es2015.js.map[39m[22m (vendor) 4.13 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+Date: [1m[37m2019-11-28T09:34:29.032Z[39m[22m - Hash: [1m[37m24499c7b178e122ca253[39m[22m - Time: [1m[37m8507[39m[22mms[0m
+
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain-es5.js, main-es5.js.map[39m[22m (main) 21.3 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills-es5.js, polyfills-es5.js.map[39m[22m (polyfills) 558 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mruntime[39m[22m} [1m[32mruntime-es5.js, runtime-es5.js.map[39m[22m (runtime) 6.09 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mstyles[39m[22m} [1m[32mstyles-es5.js, styles-es5.js.map[39m[22m (styles) 973 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mvendor[39m[22m} [1m[32mvendor-es5.js, vendor-es5.js.map[39m[22m (vendor) 4.16 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+Date: [1m[37m2019-11-28T09:34:36.217Z[39m[22m - Hash: [1m[37m62609ac23aa35578fb32[39m[22m - Time: [1m[37m7138[39m[22mms[0m
+
+> client@0.0.0 build C:\workspace\ramit\EmployeePortal\client
+> ng build --base-href /employeePortal/
+
+
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain-es2015.js, main-es2015.js.map[39m[22m (main) 20.4 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills-es2015.js, polyfills-es2015.js.map[39m[22m (polyfills) 251 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mruntime[39m[22m} [1m[32mruntime-es2015.js, runtime-es2015.js.map[39m[22m (runtime) 6.09 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mstyles[39m[22m} [1m[32mstyles-es2015.js, styles-es2015.js.map[39m[22m (styles) 973 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mvendor[39m[22m} [1m[32mvendor-es2015.js, vendor-es2015.js.map[39m[22m (vendor) 4.13 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+Date: [1m[37m2019-11-28T09:38:51.360Z[39m[22m - Hash: [1m[37m24499c7b178e122ca253[39m[22m - Time: [1m[37m8762[39m[22mms[0m
+
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain-es5.js, main-es5.js.map[39m[22m (main) 21.3 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills-es5.js, polyfills-es5.js.map[39m[22m (polyfills) 558 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mruntime[39m[22m} [1m[32mruntime-es5.js, runtime-es5.js.map[39m[22m (runtime) 6.09 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mstyles[39m[22m} [1m[32mstyles-es5.js, styles-es5.js.map[39m[22m (styles) 973 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mvendor[39m[22m} [1m[32mvendor-es5.js, vendor-es5.js.map[39m[22m (vendor) 4.16 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+Date: [1m[37m2019-11-28T09:38:59.126Z[39m[22m - Hash: [1m[37m62609ac23aa35578fb32[39m[22m - Time: [1m[37m7723[39m[22mms[0m
+
+> client@0.0.0 build C:\workspace\ramit\EmployeePortal\client
+> ng build --base-href /employeePortal/
+
+
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain-es2015.js, main-es2015.js.map[39m[22m (main) 20.4 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills-es2015.js, polyfills-es2015.js.map[39m[22m (polyfills) 251 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mruntime[39m[22m} [1m[32mruntime-es2015.js, runtime-es2015.js.map[39m[22m (runtime) 6.09 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mstyles[39m[22m} [1m[32mstyles-es2015.js, styles-es2015.js.map[39m[22m (styles) 973 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mvendor[39m[22m} [1m[32mvendor-es2015.js, vendor-es2015.js.map[39m[22m (vendor) 4.13 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+Date: [1m[37m2019-11-28T09:40:44.048Z[39m[22m - Hash: [1m[37m24499c7b178e122ca253[39m[22m - Time: [1m[37m8506[39m[22mms[0m
+
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain-es5.js, main-es5.js.map[39m[22m (main) 21.3 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills-es5.js, polyfills-es5.js.map[39m[22m (polyfills) 558 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mruntime[39m[22m} [1m[32mruntime-es5.js, runtime-es5.js.map[39m[22m (runtime) 6.09 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mstyles[39m[22m} [1m[32mstyles-es5.js, styles-es5.js.map[39m[22m (styles) 973 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+chunk {[1m[33mvendor[39m[22m} [1m[32mvendor-es5.js, vendor-es5.js.map[39m[22m (vendor) 4.16 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m
+Date: [1m[37m2019-11-28T09:40:51.516Z[39m[22m - Hash: [1m[37m62609ac23aa35578fb32[39m[22m - Time: [1m[37m7393[39m[22mms[0m

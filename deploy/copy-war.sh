@@ -1,0 +1,3 @@
+echo Copying employeePortalApi.war to webapps...
+cp -r ../backend/target/employeePortalApi.war ../apache-tomcat-8.5.43/webapps
+echo Done.

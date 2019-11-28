@@ -1,0 +1,224 @@
+[INFO] Scanning for projects...
+Downloading from archiva.default: http://ukmy-archiva.smg-uk.com:8080/archiva/repository/internal/org/springframework/boot/spring-boot-starter-parent/2.2.1.RELEASE/spring-boot-starter-parent-2.2.1.RELEASE.pom
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-resolvable parent POM for com.r.sg:EmployeePortal:0.0.1-SNAPSHOT: Could not transfer artifact org.springframework.boot:spring-boot-starter-parent:pom:2.2.1.RELEASE from/to archiva.default (http://ukmy-archiva.smg-uk.com:8080/archiva/repository/internal/): ukmy-archiva.smg-uk.com and 'parent.relativePath' points at no local POM @ line 6, column 10
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project com.r.sg:EmployeePortal:0.0.1-SNAPSHOT (C:\workspace\ramit\EmployeePortal\backend\pom.xml) has 1 error
+[ERROR]     Non-resolvable parent POM for com.r.sg:EmployeePortal:0.0.1-SNAPSHOT: Could not transfer artifact org.springframework.boot:spring-boot-starter-parent:pom:2.2.1.RELEASE from/to archiva.default (http://ukmy-archiva.smg-uk.com:8080/archiva/repository/internal/): ukmy-archiva.smg-uk.com and 'parent.relativePath' points at no local POM @ line 6, column 10: Unknown host ukmy-archiva.smg-uk.com -> [Help 2]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.r.sg:EmployeePortal >-----------------------
+[INFO] Building EmployeePortal 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ EmployeePortal ---
+[INFO] Deleting C:\workspace\ramit\EmployeePortal\backend\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ EmployeePortal ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ EmployeePortal ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to C:\workspace\ramit\EmployeePortal\backend\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ EmployeePortal ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\workspace\ramit\EmployeePortal\backend\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ EmployeePortal ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\workspace\ramit\EmployeePortal\backend\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ EmployeePortal ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.r.sg.application.EmployeePortalApplicationTests
+15:08:03.695 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:08:03.719 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:08:03.751 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.r.sg.application.EmployeePortalApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:08:03.770 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.r.sg.application.EmployeePortalApplicationTests], using SpringBootContextLoader
+15:08:03.775 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.r.sg.application.EmployeePortalApplicationTests]: class path resource [com/r/sg/application/EmployeePortalApplicationTests-context.xml] does not exist
+15:08:03.775 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.r.sg.application.EmployeePortalApplicationTests]: class path resource [com/r/sg/application/EmployeePortalApplicationTestsContext.groovy] does not exist
+15:08:03.775 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.r.sg.application.EmployeePortalApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:03.776 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.r.sg.application.EmployeePortalApplicationTests]: EmployeePortalApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:03.814 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.r.sg.application.EmployeePortalApplicationTests]
+15:08:03.891 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\workspace\ramit\EmployeePortal\backend\target\classes\com\r\sg\application\Application.class]
+15:08:03.895 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.r.sg.application.Application for test class com.r.sg.application.EmployeePortalApplicationTests
+15:08:03.994 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.r.sg.application.EmployeePortalApplicationTests]: using defaults.
+15:08:03.995 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:08:04.018 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4686afc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1e0b4072, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@791f145a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@38cee291, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4b45a2f5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f09733f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e350b40, org.springframework.test.context.event.EventPublishingTestExecutionListener@41a0aa7d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2794eab6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6340e5f0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@45099dd3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13e344d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1ffaf86]
+15:08:04.023 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5ab956d7 testClass = EmployeePortalApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3646a422 testClass = EmployeePortalApplicationTests, locations = '{}', classes = '{class com.r.sg.application.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3daa422a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@27ce24aa, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7714e963, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1a451d4d], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:08:04.054 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2019-11-28 15:08:04.317  INFO 52148 --- [           main] c.r.s.a.EmployeePortalApplicationTests   : Starting EmployeePortalApplicationTests on U6078235-TPL-A with PID 52148 (started by U6078235 in C:\workspace\ramit\EmployeePortal\backend)
+2019-11-28 15:08:04.318  INFO 52148 --- [           main] c.r.s.a.EmployeePortalApplicationTests   : No active profile set, falling back to default profiles: default
+2019-11-28 15:08:05.225  INFO 52148 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-28 15:08:05.326  INFO 52148 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 1 repository interfaces.
+2019-11-28 15:08:05.754  INFO 52148 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-28 15:08:05.968  INFO 52148 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-28 15:08:06.221  INFO 52148 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-28 15:08:06.298  INFO 52148 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-28 15:08:06.412  INFO 52148 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-28 15:08:06.625  INFO 52148 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-28 15:08:07.077  INFO 52148 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-11-28 15:08:07.798  INFO 52148 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-28 15:08:07.806  INFO 52148 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 15:08:08.349  WARN 52148 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-28 15:08:08.596  INFO 52148 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-28 15:08:08.992  INFO 52148 --- [           main] c.r.s.a.EmployeePortalApplicationTests   : Started EmployeePortalApplicationTests in 4.926 seconds (JVM running for 6.104)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.485 s - in com.r.sg.application.EmployeePortalApplicationTests
+2019-11-28 15:08:09.143  INFO 52148 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-28 15:08:09.145  INFO 52148 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 15:08:09.146  INFO 52148 --- [extShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-11-28 15:08:09.154  INFO 52148 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-28 15:08:09.158  INFO 52148 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ EmployeePortal ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [EmployeePortal] in [C:\workspace\ramit\EmployeePortal\backend\target\employeePortalApi]
+[INFO] Processing war project
+[INFO] Webapp assembled in [2446 msecs]
+[INFO] Building war: C:\workspace\ramit\EmployeePortal\backend\target\employeePortalApi.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.1.RELEASE:repackage (repackage) @ EmployeePortal ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ EmployeePortal ---
+[INFO] Installing C:\workspace\ramit\EmployeePortal\backend\target\employeePortalApi.war to C:\Users\U6078235\.m2\repository\com\r\sg\EmployeePortal\0.0.1-SNAPSHOT\EmployeePortal-0.0.1-SNAPSHOT.war
+[INFO] Installing C:\workspace\ramit\EmployeePortal\backend\pom.xml to C:\Users\U6078235\.m2\repository\com\r\sg\EmployeePortal\0.0.1-SNAPSHOT\EmployeePortal-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.660 s
+[INFO] Finished at: 2019-11-28T15:08:17+05:30
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.r.sg:EmployeePortal >-----------------------
+[INFO] Building EmployeePortal 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ EmployeePortal ---
+[INFO] Deleting C:\workspace\ramit\EmployeePortal\backend\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ EmployeePortal ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ EmployeePortal ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to C:\workspace\ramit\EmployeePortal\backend\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ EmployeePortal ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\workspace\ramit\EmployeePortal\backend\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ EmployeePortal ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\workspace\ramit\EmployeePortal\backend\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ EmployeePortal ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.r.sg.application.EmployeePortalApplicationTests
+15:09:58.242 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:09:58.259 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:09:58.288 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.r.sg.application.EmployeePortalApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:09:58.306 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.r.sg.application.EmployeePortalApplicationTests], using SpringBootContextLoader
+15:09:58.311 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.r.sg.application.EmployeePortalApplicationTests]: class path resource [com/r/sg/application/EmployeePortalApplicationTests-context.xml] does not exist
+15:09:58.311 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.r.sg.application.EmployeePortalApplicationTests]: class path resource [com/r/sg/application/EmployeePortalApplicationTestsContext.groovy] does not exist
+15:09:58.311 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.r.sg.application.EmployeePortalApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:09:58.312 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.r.sg.application.EmployeePortalApplicationTests]: EmployeePortalApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:09:58.348 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.r.sg.application.EmployeePortalApplicationTests]
+15:09:58.419 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\workspace\ramit\EmployeePortal\backend\target\classes\com\r\sg\application\Application.class]
+15:09:58.423 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.r.sg.application.Application for test class com.r.sg.application.EmployeePortalApplicationTests
+15:09:58.523 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.r.sg.application.EmployeePortalApplicationTests]: using defaults.
+15:09:58.524 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:09:58.546 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4686afc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1e0b4072, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@791f145a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@38cee291, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4b45a2f5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f09733f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e350b40, org.springframework.test.context.event.EventPublishingTestExecutionListener@41a0aa7d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2794eab6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6340e5f0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@45099dd3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13e344d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1ffaf86]
+15:09:58.550 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5ab956d7 testClass = EmployeePortalApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3646a422 testClass = EmployeePortalApplicationTests, locations = '{}', classes = '{class com.r.sg.application.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3daa422a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@27ce24aa, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7714e963, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1a451d4d], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:09:58.582 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2019-11-28 15:09:58.829  INFO 48272 --- [           main] c.r.s.a.EmployeePortalApplicationTests   : Starting EmployeePortalApplicationTests on U6078235-TPL-A with PID 48272 (started by U6078235 in C:\workspace\ramit\EmployeePortal\backend)
+2019-11-28 15:09:58.830  INFO 48272 --- [           main] c.r.s.a.EmployeePortalApplicationTests   : No active profile set, falling back to default profiles: default
+2019-11-28 15:09:59.541  INFO 48272 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-28 15:09:59.618  INFO 48272 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 1 repository interfaces.
+2019-11-28 15:09:59.970  INFO 48272 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-28 15:10:00.150  INFO 48272 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-28 15:10:00.372  INFO 48272 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-28 15:10:00.437  INFO 48272 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-11-28 15:10:00.523  INFO 48272 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-11-28 15:10:00.684  INFO 48272 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-11-28 15:10:01.121  INFO 48272 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-11-28 15:10:01.793  INFO 48272 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-11-28 15:10:01.800  INFO 48272 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 15:10:02.348  WARN 48272 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-28 15:10:02.586  INFO 48272 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-28 15:10:02.957  INFO 48272 --- [           main] c.r.s.a.EmployeePortalApplicationTests   : Started EmployeePortalApplicationTests in 4.366 seconds (JVM running for 5.389)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.873 s - in com.r.sg.application.EmployeePortalApplicationTests
+2019-11-28 15:10:03.090  INFO 48272 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-28 15:10:03.092  INFO 48272 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-28 15:10:03.092  INFO 48272 --- [extShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-11-28 15:10:03.098  INFO 48272 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-28 15:10:03.102  INFO 48272 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ EmployeePortal ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [EmployeePortal] in [C:\workspace\ramit\EmployeePortal\backend\target\employeePortalApi]
+[INFO] Processing war project
+[INFO] Webapp assembled in [2412 msecs]
+[INFO] Building war: C:\workspace\ramit\EmployeePortal\backend\target\employeePortalApi.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.1.RELEASE:repackage (repackage) @ EmployeePortal ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ EmployeePortal ---
+[INFO] Installing C:\workspace\ramit\EmployeePortal\backend\target\employeePortalApi.war to C:\Users\U6078235\.m2\repository\com\r\sg\EmployeePortal\0.0.1-SNAPSHOT\EmployeePortal-0.0.1-SNAPSHOT.war
+[INFO] Installing C:\workspace\ramit\EmployeePortal\backend\pom.xml to C:\Users\U6078235\.m2\repository\com\r\sg\EmployeePortal\0.0.1-SNAPSHOT\EmployeePortal-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.063 s
+[INFO] Finished at: 2019-11-28T15:10:10+05:30
+[INFO] ------------------------------------------------------------------------

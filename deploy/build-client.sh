@@ -1,0 +1,3 @@
+echo Building EmployeePortalClient...
+cd ../client && npm run-script build >> ../deploy/logs/build-client.log
+echo Done.
