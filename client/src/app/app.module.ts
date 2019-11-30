@@ -13,12 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, MatInputModule, MatButtonModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatSelectModule, MatOptionModule } from '@angular/material';
 import { GenderPipe } from './gender.pipe';
 import { DepartmentPipe } from './department.pipe';
-
-const routes: Routes = [
-  {path: 'createUser', component: UserComponent},
-  {path: 'viewUsers', component: UserDetailsComponent},
-  {path: '', component: UserComponent}
-]
+import { AppRoutingModule } from './app-routing.module';
+import { MessagePanelComponent } from './message-panel/message-panel.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +23,12 @@ const routes: Routes = [
     UserDetailsComponent,
     SortUserPipe,
     GenderPipe,
-    DepartmentPipe
+    DepartmentPipe,
+    MessagePanelComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,

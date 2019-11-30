@@ -1,0 +1,11 @@
+<div *ngIf="showPanel" [ngClass]="panelClass()">
+    <button type="button" class="close" data-dismiss="alert"
+        (click)="showPanel = false">
+        &times;
+    </button>
+    <ul class="list-group">
+        <li *ngFor="let message of message?.messages">
+            {{message}}
+        </li>
+    </ul>
+</div>

@@ -148,6 +148,10 @@ label{
 	min-height: 1rem;
 }
 
+.epFormValidationInvalid label {
+  color: #f44336;
+}
+
 /* For Laptops and Desktops */
 @media ( min-width: 991px ) {
 	.ct-form-label {

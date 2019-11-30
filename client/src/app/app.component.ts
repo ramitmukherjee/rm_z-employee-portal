@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MessageService } from './message.service';
+import { Message } from './models/Message';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,17 @@ import { MessageService } from './message.service';
   styleUrls: ['./app.component.css'],
   providers: [MessageService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'client';
   showSuccess = true;
+  showError = true;
+  message: Message;
 
   constructor(private messageService: MessageService) {}
+
+  ngOnInit() {
+    this.messageService.subject.subscribe(
+      messages => this.message = messages
+    );
+  }
 }
